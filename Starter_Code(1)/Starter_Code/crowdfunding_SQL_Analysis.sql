@@ -73,7 +73,7 @@ INTO email_backers_remaining_goal_amount
 FROM backers_cleaned as bc
 	INNER JOIN campaign as camp
 		ON (bc.cf_id = camp.cf_id)
-ORDER BY bc.email DESC;
+ORDER BY bc.last_name ASC, bc.email DESC;
 
 -- Check the table
 
